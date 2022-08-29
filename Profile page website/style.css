@@ -383,7 +383,7 @@ div.clock {
     cursor: pointer;
 }
 
-.service {
+.content {
     background: #fff;
     opacity: 85%;
     padding: 30px;
@@ -396,7 +396,7 @@ div.clock {
     z-index: 4;
 }
 
-.service-logo {
+.content-logo {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -408,7 +408,7 @@ div.clock {
     align-items: center;
 }
 
-.service p {
+.content p {
     width: auto;
     height: auto;
     text-align: center;
@@ -420,7 +420,7 @@ div.clock {
     transform: translate(0%, -10%);
 }
 
-.service h4 {
+.content h4 {
     position: relative;
     height: auto;
     width: auto;
@@ -435,7 +435,7 @@ div.clock {
     z-index: -1;
 }
 
-.service h4::before {
+.content h4::before {
     content: '';
     display: block;
     width: 2px;
@@ -447,7 +447,7 @@ div.clock {
     z-index: -2;
 }
 
-.service h4::after {
+.content h4::after {
     content: '';
     display: block;
     width: 2vw;
@@ -455,11 +455,11 @@ div.clock {
     position: absolute;
     background: linear-gradient(to left, #fff, #357EC7);
     bottom: 80%;
-    right: 90%;
+    right: 83%;
     z-index: -2;
 }
 
-.service img {
+.content img {
     border-radius: 10%;
     box-sizing: border-box; 
     width: 70%;
@@ -492,7 +492,7 @@ div.shadowTwo {
     z-index: 1;
 }
 
-.main:hover .service {
+.main:hover .content {
     transform: translateY(-27%);
     transition: 1.3s;
 }
