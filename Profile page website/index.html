@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/cc0a631b45.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+</head>
+<body>
+    <div class="desktop">
+        <div class="taskbar">
+            <div class="middle-icons">
+                <div class="icon start">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAAeUlEQVRoge3XsQ2AIBgF4R9j5QYu4XgO4Xgu4QTU2liRWEE4Se5rSR65goIISSKlr4N1P+/a8evY0ruVI2JpsVWaakb/wACaATQDaAbQDKAZQDOANne6J3e6R931+lI22yoN/4gNoBlAM4BmAM0AmgE0A2jDB0gS6wG/DhE6wZ6XMAAAAABJRU5ErkJggg==">
+                </div>
+                <div class="icon">
+                    <a href="https://discordapp.com/users/403420586757324800/" target="_blank"><i class="fa-brands fa-discord fa-lg"></i></a>
+                </div>
+                <div class="icon">
+                    <a href="https://www.google.com/" target="_blank"><i class="fa-brands fa-edge fa-lg"></i></a>
+                </div>
+                <div class="icon">
+                    <a href="https://open.spotify.com/user/1fafkxag5lmsoz84etprbz6u7?si=830e33d8eda14989" target="_blank"><i class="fa-brands fa-spotify fa-lg"></i></a>
+                </div>
+                <div class="icon">
+                    <a href="https://github.com/Shzmj" target="_blank"><i class="fa-brands fa-github fa-lg"></i></a>
+                </div>
+                <div class="icon">
+                    <a href="https://www.instagram.com/shaam_jevan/" target="_blank">
+                        <i class="fa-brands fa-instagram fa-lg"></i>
+                    </a>
+                </div>
+                <div class="icon">
+                    <a href="https://www.linkedin.com/in/shaam-jevan-847b2b199" target="_blank">
+                        <i class="fa-brands fa-linkedin fa-lg"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="side-icons">
+                <i class="fas fa-solid fa-chevron-up fa-1x show-desktop"></i>
+                <i class="fas fa-solid fa-wifi fa-1x"></i>
+                <i class="fas fa-solid fa-volume-low fa-1x"></i>
+                <i class="fas fa-solid fa-battery-three-quarters fa-1x"></i>
+                <div class = "clock">
+                    <span id="time"></span>
+                    <span id="date"></span>
+                    <script>
+                    var t = setInterval(dateFnction,1000);
+                    function dateFnction() {
+                        var date = new Date();
+                        document.getElementById("time").innerHTML = date.toLocaleTimeString(navigator.language, {hour: '2-digit', minute:'2-digit'});
+                        document.getElementById("date").innerHTML = date.toLocaleDateString();
+                    }
+                    </script>
+                </div>
+                <i class="fa-solid fa-bell"></i> 
+            </div>
+        </div>
+        <div class="profile-menu">
+            <div class="section-top">
+                <div class="boxContainer"> 
+                    <table class="elementsContainer"> 
+                        <tr> 
+                            <td>
+                                <div class="searchIcon">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <input type="text" placeholder="Shaam Jevan" class="search">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="textContainer">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="main">
+                                <div class="service">
+                                    <div class="service-logo">
+                                        <i class="fa-regular fa-address-card fa-lg bluecolor"></i>
+                                    </div>
+                                    <h4>About Me</h4>
+                                    <p>Hey! My name is Shaam, and I'm a first year student at UNSW studying Computer Science and Statistics. I was born in South Africa and had moved to Australia almost 11 years ago.</p>
+                                </div>
+                                <div class="shadowOne"></div>
+                                <div class="shadowTwo"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="main">
+                                <div class="service">
+                                    <div class="service-logo">
+                                        <i class="fa-solid fa-gamepad fa-lg bluecolor"></i>
+                                    </div>
+                                    <h4>Hobbies</h4>
+                                    <p>In my spare time you will find me listening to music, gaming, practising my photography skills everywhere I go or all of the above combined =).</p>
+                                </div>
+                                <div class="shadowOne"></div>
+                                <div class="shadowTwo"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="main">
+                                <div class="service">
+                                    <div class="service-logo">
+                                        <i class="fa-solid fa-camera-retro fa-lg bluecolor"></i>
+                                    </div>
+                                    <h4>Photos</h4>
+                                    <p>Here are three of my photos - enjoy the sizing =(</p>
+                                    <img src="/images/beach2.jpeg" alt="Beach">
+                                    <img src="/images/sea.jpeg" alt="Sea view">
+                                    <img src="/images/beach1.jpeg" alt="Beach">
+                                </div>
+                                <div class="shadowOne"></div>
+                                <div class="shadowTwo"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="character"> 
+            <div class="ear1"></div>
+            <div class="ear2"></div>
+            <div class="neck"></div>
+            <div class="hair-back"></div>
+            <div class="shoulders"></div>
+            <div class="face">
+                <div class="teeth-top"></div>
+            </div>
+            <div class="nose"></div>
+            <div class="eyes">
+                <div class="eye"></div>
+                <div class="eye"></div>
+            </div>
+            <div class="eyebrows">
+                <div class="eyebrow"></div>
+                <div class="eyebrow"></div>
+            </div>
+            <div class="hair-front-1"></div>
+            <div class="hair-front-1"></div>
+            <div class="hair-front-2"></div>
+            <div class="hair-front-2"></div>
+            <div class="hair-front-3"></div>
+            <div class="hair-front-3"></div>
+            <div class="hair-bangs"></div>
+        </div>
+    </div>
+    <script> 
+        document.querySelector('body').addEventListener('mousemove', eyeball);
+        function eyeball() {
+            var eye = document.querySelectorAll('.eye');
+            eye.forEach(function(eye) {
+                let x = (eye.getBoundingClientRect().left) + (eye.clientWidth / 2);
+                let y = (eye.getBoundingClientRect().top) + (eye.clientHeight / 2);
+                let radian = Math.atan2(event.pageX - x, event.pageY - y);
+                let rot = (radian * (180 / Math.PI) * -1) + 270;
+                eye.style.transform = "rotate(" + rot + "deg)";
+            })
+        }
+    </script>
+
+    
+</body>
+</html>

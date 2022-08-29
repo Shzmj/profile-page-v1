@@ -1,0 +1,540 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+div.desktop{
+    background: url(/images/background.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+.taskbar {
+    width: 100vw;
+    height: 5.2%;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(to right, rgba(229, 239, 249, 0.8), rgba(213, 220, 238, 0.8), rgba(229, 239, 249, 0.8));
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+    opacity: 75%;
+}
+
+.character {
+    position: absolute;
+    top: 4%;
+    left: 29%;
+    width: 80vmin;
+    height: 80vmin;
+    background-size: 10% 100%, 100% 10%;
+    transition: 0.3s;
+}
+
+.character {
+    --skin: rgba(198, 136, 99);
+}
+
+.face {
+    width: 8%;
+    height: 10%;
+    background: var(--skin);
+    border-radius: 100% 100% / 70% 70% 120% 120%;
+    top: 35%;
+    left: 48%;
+    transform: translate(71.5%, 680%);
+    cursor: pointer;
+}
+
+.face .teeth-top {
+    width: 40%;
+    height: 6%;
+    background: #fbfbf4;
+    border-radius: 100% 100% / 70% 70% 120% 120%;
+    border-bottom-left-radius: 900%;
+    border-bottom-right-radius: 900%;
+    top: 0;
+    left: 0;
+    transform: translate(75%, 1228%);
+}
+
+.face::before {
+    content: '';
+    position: absolute;
+    top: 75%;
+    left: 30%;
+    width: 40%;
+    height: 10%;
+    background: #ffc8d9;
+    border-bottom-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+    transition: 0.3s;
+}
+
+.face:hover::before {
+    top: 75%;
+    left: 30%;
+    width: 40%;
+    height: 15%;
+    background: #ffc8d9;
+    border-bottom-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+    transition: 0.3s;
+}
+
+.neck {
+    width: 4%;
+    height: 5%;
+    background: var(--skin);
+    top: 50%;
+    left: 50%;
+    transform: translate(190%, 1890%);
+    border-radius: 10vmin;
+    box-shadow: inset 0 25.5vmin 0 -15vmin rgba(60, 0, 0, 0.1);
+}
+
+.eyes {
+    position: relative;
+    top: 56.4%;
+    left: 5.26%;
+    display: flex;
+}
+
+.eyes .eye {
+    position: relative;
+    width: 14.5px;
+    height: 14.5px;
+    display: block;
+    background: #fff;
+    margin: 0 1.24%;
+    border-radius : 50%;
+}
+
+.eyes .eye::before {
+    content: '';
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 4.5px;
+    height: 4.5px;
+    background: #333;
+    border-radius : 50%;
+}
+
+.eyebrows {
+    position: relative;
+    top: 53.5%;
+    left: 5%;
+    display: flex;
+}
+
+.eyebrows .eyebrow {
+    position: relative;
+    width: 16px;
+    height: 4px;
+    background: black;
+    margin: 0 1.2%;
+    border-radius : 80% 90% 30% 40% / 70% 100% 90% 100%;
+    box-shadow: -0.25vmin -1.5vmin 0 -0.25vmin;
+    transform: rotate(7deg);
+}
+
+.nose {
+    width: 1.5%;
+    height: 4%;
+    background: rgba(80, 0, 0, 0.2);
+    top: 50%;
+    left: 50%;
+    transform: translate(610%, 1525%);
+    clip-path: polygon(50% 0%, 60% 88%, 0% 85%, 55% 100%, 100% 88%);
+}
+
+.ear1 {
+    width: 2%;
+    height: 4%;
+    border-radius: 90% 100% 70% 100% / 70% 100%;
+    background: var(--skin);
+    box-shadow: inset 9vmin 0 0 --7vmin rgba(80, 0, 0, 0.125);
+    transform: translate(633%, 2455%) rotate(14deg);
+    top: -10%;
+    left: 27%;
+}
+
+.ear2 {
+    width: 2%;
+    height: 4%;
+    border-radius: 90% 100% 70% 100% / 70% 100%;
+    background: var(--skin);
+    box-shadow: inset -9vmin 0 0 --7vmin rgba(80, 0, 0, 0.125);
+    transform: translate(230%, 2355%) rotate(-8deg);
+    top: -10%;
+    left: 27%;
+}
+
+.shoulders {
+    width: 20%;
+    height: 4.4%; 
+    background: #032d49;
+    border-radius: 50%;
+    transform: translate(-2.1%, 1880%);
+    clip-path: polygon(0% 40%, 40% 10%, 40% 0%, 60% 0%, 60% 10%, 100% 40%, 100% 100%,  0% 100%); 
+}
+
+.hair-back {
+    width: 8%;
+    height: 10%;
+    border-radius: 90% 90% 30% 30% / 100%;
+    background:  #242424;
+    top: 0%;
+    left: 50%;
+    transform: translate(71.3%, 805%);
+    border-radius: 100% 100% / 80% 80% 120% 120%;
+    box-shadow: inset 0 0 0 10vmin rgba(0,0,0,0.075)
+  }
+  
+  .hair-front-1 {
+    width: 6%;
+    height: 5%;
+    background:  #100C07;
+    border-radius: 0 100% 0 100%;
+    left: 90%;
+    top: 0%;
+    transform: translate(153%, 975%);
+  }
+  
+  .hair-front-1 + .hair-front-1 {
+    left: 20%;
+    top: -5%;
+    transform: translate(75%, 870%) rotate(-70deg);
+  }
+
+  .hair-bangs {
+    width: 6%;
+    height: 2%;
+    border-radius: 50%;
+    transform: translate(57%, 1440%) rotate(-40deg);
+    left: 13.5%;
+    top: -5%;
+    box-shadow: 3vmin 0  #100C07;
+    clip-path: polygon(0% 50%, 150% 50%, 150% 100%, 0% 100%);
+  }
+  
+  .hair-front-2 {
+    width: 6%;
+    height: 2%;
+    background: #242024;
+    border-radius: 100% 0 120% 0;
+    left: 20%;
+    top: 0.75%;
+    transform: translate(65%, 1925%) rotate(4deg);
+  }
+  
+  .hair-front-2 + .hair-front-2 {
+    border-radius: 100% 0 140% 0;
+    transform: translate(140%, 1830%) rotate(-7deg);
+    top: -11.5%;
+    left: 42%;
+  }
+  
+  .hair-front-3 {
+    width: 6%;
+    height: 5%;
+    background: #100C07;
+    border-radius: 0% 100% 0 100%;
+    transform: translate(155%, 680%) rotate(-25deg)
+  }
+  
+  .hair-front-3 + .hair-front-3 {
+    transform: translate(70%, 590%) rotate(-50deg);
+    top: 0;
+    left: 53%;
+  }
+  
+
+div.profile-menu {
+    height: 74.3vh;
+    width: 43.5vw;
+    background-color: rgba(213, 220, 238, 0.95);
+    position: absolute;
+    bottom: 7%;
+    left: 28%;
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+}
+
+div.boxContainer { 
+    margin: auto;
+    margin-top: 20%;
+    transform: translate(-2%, -364%);
+    width: 38vw;
+    height: 4vh;
+    border: 4px solid #357EC7;
+    padding: 0px;
+    border-radius: 10px;
+}
+
+div.elementsContainer {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.search {
+    border: none;
+    height: 100%;
+    width: 30vw;
+    padding: 0px 5px;
+    border-radius: 40px;
+    transform: translate(2%, 10%);
+    font-size: calc(10px + 0.390625vw);
+    font-family: 'Segoe UI', sans-serif;;
+    background: rgba(213, 220, 238, 0.9);;
+    font-weight: 500;
+}
+
+.search:focus {
+    outline: none;
+}
+.searchIcon {
+    transform: translate(50%, 10%);
+}
+
+.icon {
+    text-decoration: none !important;
+    color: none !important;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 4px;
+    transition: color 0.2s;
+}
+
+.icon:hover {
+    color: #000080;
+    cursor: pointer;
+}
+
+div.start {
+    background: linear-gradient(135deg, rgba(239, 249, 255, 0.5), rgba(243, 246, 251, 0.75));
+    border-radius: 3px;
+    border-top: 1px solid white;
+    border-bottom: 1px inset white;
+}
+
+img.start {
+    height: 30px;
+}
+
+img {
+    height: 30px;
+}
+
+div.taskbar>.middle-icons {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 39%;
+    flex: 1;
+    align-items: center;
+}
+
+div.taskbar>.side-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 15px;;
+}
+
+i.show-desktop {
+    margin-right: 15px;
+}
+
+i.fas {
+    padding: 0 4px;
+}
+
+div.clock {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: calc(8px + 0.390625vw);
+    font-family: 'Segoe UI', sans-serif;
+    margin-left: 15px;
+    margin-right: 10px;
+}
+
+.main {
+    width: 35%;
+    min-height: 65%;
+    text-align: center;
+    position: relative;
+    justify-content: center; 
+    align-items: center;
+    cursor: pointer;
+}
+
+.service {
+    background: #fff;
+    opacity: 85%;
+    padding: 30px;
+    border-radius: 15px;
+    width: 12vw;
+    height: 40vh;
+    position: relative;
+    transform: translate(0%, -20%);
+    box-shadow: 0 0 20px -15px #030380;
+    z-index: 4;
+}
+
+.service-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: -90px auto 0;
+    background: #fff;
+    border: 0.3vw solid #007bff;
+    transform: translate(0%, 100%);
+    justify-content: center;
+    align-items: center;
+}
+
+.service p {
+    width: auto;
+    height: auto;
+    text-align: center;
+    font-size: calc(8px + 0.390625vw);
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 480;
+    margin: 10px 0 0;
+    color: #000;
+    transform: translate(0%, -10%);
+}
+
+.service h4 {
+    position: relative;
+    height: auto;
+    width: auto;
+    font-size: calc(16.2px + 0.390625vw);
+    overflow: hidden;
+    display: flex;
+    text-align: center;
+    justify-content: center; 
+    align-items: center;
+    background: #fff;
+    margin: 50px auto;
+    z-index: -1;
+}
+
+.service h4::before {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 30px;
+    position: absolute;
+    background: #357EC7;
+    top: 10%;
+    left: 0%;
+    z-index: -2;
+}
+
+.service h4::after {
+    content: '';
+    display: block;
+    width: 2vw;
+    height: 3px;
+    position: absolute;
+    background: linear-gradient(to left, #fff, #357EC7);
+    bottom: 80%;
+    right: 90%;
+    z-index: -2;
+}
+
+.service img {
+    border-radius: 10%;
+    box-sizing: border-box; 
+    width: 70%;
+    height: 20%;
+
+}
+
+div.shadowOne {
+    height: 200px;
+    width: 248%;
+    background: #fff;
+    opacity: 50%;
+    position: absolute;
+    border-radius: 10px;
+    transform: translate(12.3%, -134.3%);
+    z-index: 2;
+    box-shadow: 0 0 20px -15px #030380;
+}
+
+div.shadowTwo {
+    transform: translate(22%, 90%);
+    height: 200px;
+    width: 200%;
+    background: #fff;
+    opacity: 40%;
+    position: absolute;
+    border-radius: 10px;
+    top: -12.5vh;
+    left: 10%;
+    z-index: 1;
+}
+
+.main:hover .service {
+    transform: translateY(-27%);
+    transition: 1.3s;
+}
+
+.main:hover .shadowOne {
+    transform: translate(12.3%, -140%);
+    transition: 1.2s;
+}
+
+.main:hover i {
+    transform: rotate(360deg);
+    transition: 1s;
+}
+
+.bluecolor {
+    color: #357EC7;
+}
+
+.fa-gamepad {
+    position: absolute;
+    left: 8%;
+    top: 23%;
+}
+
+.fa-address-card {
+    position: absolute;
+    left: 11%;
+    top: 23%;
+}
+
+.fa-camera-retro {
+    position: absolute;
+    left: 15.4%;
+    top: 23%;
+}
+
+@media screen and (max-width: 1060px) {
+    #primary { width:67%; }
+    #secondary { width:30%; margin-left:3%;}  
+}
+
+@media screen and (max-width: 768px) {
+    #primary { width:100%; }
+    #secondary { width:100%; margin:0; border:none; }
+}
